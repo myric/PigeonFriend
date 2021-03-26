@@ -30,6 +30,7 @@ void setup(){
   USE_SERIAL.println("\nConnected, IP address: ");
   USE_SERIAL.println(WiFi.localIP());
   USE_SERIAL.println("Setup End");
+  // Would love to add an LED here to signal connection when headless
 
   // Sculpture setup
 
@@ -52,10 +53,10 @@ void loop() {
         }
         else if(response.equals("true")) {
             
-            // 1/4 turn, medium pause
-            moveSteps(true, 32 * 16, 1);
+            // 1/2 turn, medium pause, a little quicker
+            moveSteps(true, 32 * 32, .5);
             delay(750);
-            moveSteps(false, 32 * 16, 1);
+            moveSteps(false, 32 * 32, .5);
             delay(750);
         }
         USE_SERIAL.println("Response was: " + response);
