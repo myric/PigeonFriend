@@ -4,11 +4,12 @@
 #define USE_SERIAL Serial
 
 #include "credentials.h"
+//#include "phonecred.h"
 
 const char *ssid_Router     = ROUTER; //Enter the router name
 const char *password_Router = PWD; //Enter the router password
 
-String address= "http://165.227.76.232:3000/YOUR-UNI/running";
+String address= "http://165.227.76.232:3000/mhl2157/running";
 
 // Sculpture Prep
 
